@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Ristanto</title>
+
+    <!-- Font & Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============ DASAR ============ */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            background: #1e1e2f;
+            margin: 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+            padding: 40px 50px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #e0e0ff;
+        }
+
+        h1 { font-size: 2.6rem; font-weight: 700; }
+        h2 { font-size: 1.8rem; margin-top: 50px; border-bottom: 2px solid #6a11cb; padding-bottom: 10px; }
+
+        p, blockquote {
+            line-height: 1.7;
+            color: #ccc;
+            text-align: center;
+        }
+
+        a { color: #6a11cb; text-decoration: none; transition: 0.3s; }
+        a:hover { color: #fff; }
+
+        /* ============ FOTO PROFIL ============ */
+        img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 160px; height: 160px;
+            border-radius: 50%;
+            border: 5px solid #6a11cb;
+            box-shadow: 0 0 20px #6a11cb;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover { transform: scale(1.05); }
+
+        /* ============ KONTAK ============ */
+        .contact-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #2a2a40;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.95em;
+            color: #ccc;
+            box-shadow: 0 0 10px rgba(106,17,203,0.3);
+            transition: 0.3s;
+        }
+
+        .contact-item i { color: #6a11cb; }
+        .contact-item:hover { background: #35355a; color: #fff; }
+
+        blockquote {
+            font-style: italic;
+            color: #9a9ac2;
+            border-left: 5px solid #6a11cb;
+            padding-left: 20px;
+            margin: 30px auto 40px;
+            max-width: 600px;
+        }
+
+        /* ============ TABEL ============ */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            color: #ddd;
+            font-size: 1em;
+        }
+
+        th, td {
+            padding: 14px 20px;
+            border: 1px solid #3a3a5f;
+            text-align: center;
+        }
+
+        th {
+            background-color: #6a11cb;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr:hover { background-color: #2c2c50; }
+
+        /* ============ LIST ============ */
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 30px;
+            font-size: 1em;
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        ul li i {
+            position: absolute;
+            left: 0; top: 50%;
+            transform: translateY(-50%);
+            color: #6a11cb;
+        }
+
+        ul li:hover { color: #6a11cb; }
+
+        /* ============ AUDIO & VIDEO ============ */
+        audio, iframe {
+            display: block;
+            margin: 0 auto 40px;
+            box-shadow: 0 0 20px rgba(106, 17, 203, 0.6);
+            border-radius: 10px;
+        }
+
+        audio { width: 100%; max-width: 420px; }
+        iframe { border: none; border-radius: 15px; }
+
+        /* ============ SOSIAL MEDIA ============ */
+        .social-links {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            font-size: 1.8em;
+            color: #6a11cb;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover { color: #fff; }
+
+        /* ============ FOOTER ============ */
+        footer {
+            text-align: center;
+            color: #bbb;
+            padding: 20px 0;
+            font-size: 0.95em;
+            border-top: 1px solid #6a11cb;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 25px; }
+            .contact-card { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-user-circle"></i> Portofolio Ristanto</h1>
+        <img src="fotoato.jpg" alt="Foto Profil Ristanto">
+
+        <!-- Kontak -->
+        <div class="contact-card">
+            <div class="contact-item"><i class="fas fa-phone"></i> 0812 9506 2249</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> ristantoato7@gmail.com</div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Sumedang, Jawa Barat</div>
+            <a href="https://linkedin.com/in/ristanto0905" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+
+        <!-- Tentang Saya -->
+        <h2><i class="fas fa-info-circle"></i> Tentang Saya</h2>
+        <p>Halo! Saya <strong>Ristanto</strong>, mahasiswa Fakultas Teknologi Informasi Program Studi Informatika di Universitas Sebelas April Sumedang. Saya seorang pengembang web yang penuh semangat, serta memiliki minat besar pada <strong>Public Speaking</strong> dan hal-hal baru untuk menginspirasi banyak orang.</p>
+        <blockquote><i class="fas fa-quote-left"></i> "Gagal coba lagi, kalah bangkit lagi."</blockquote>
+
+        <!-- Pendidikan -->
+        <h2><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
+        <table>
+            <tr><th>Jenjang</th><th>Institusi</th><th>Tahun</th></tr>
+            <tr><td>S1 - Informatika</td><td>Universitas Sebelas April, Sumedang</td><td>2023 - Sekarang</td></tr>
+            <tr><td>Teknik Komputer dan Jaringan</td><td>SMK Negeri 1 Buahdua, Sumedang</td><td>2020 - 2023</td></tr>
+        </table>
+
+        <!-- Pengalaman Magang -->
+        <h2><i class="fas fa-briefcase"></i> Pengalaman Magang</h2>
+        <table>
+            <tr><th>Posisi</th><th>Perusahaan</th><th>Periode</th></tr>
+            <tr><td>Staf Administrasi</td><td>Dinas Pemberdayaan Masyarakat Daerah (DPMD) Kabupaten Sumedang</td><td>Jan - Apr 2022</td></tr>
+        </table>
+
+        <!-- Pengalaman Organisasi -->
+        <h2><i class="fas fa-users"></i> Pengalaman Organisasi</h2>
+        <ul>
+            <li><i class="fas fa-user-tie"></i> Ketua PKS SMKN 1 Buahdua (2021 - 2022)</li>
+            <li><i class="fas fa-handshake"></i> Forum MPK Sumedang (2021 - 2022)</li>
+            <li><i class="fas fa-first-aid"></i> PMR SMKN 1 Buahdua (2021 - 2022)</li>
+            <li><i class="fas fa-users"></i> OSIS SMKN 1 Buahdua (2020 - 2022)</li>
+            <li><i class="fas fa-broadcast-tower"></i> UNSAP Radio (2023 - Sekarang)</li>
+            <li><i class="fas fa-code"></i> Himpunan Mahasiswa Informatika UNSAP (2024 - Sekarang)</li>
+            <li><i class="fas fa-lightbulb"></i> Pelita Intan Muda Sumedang (2025 - Sekarang)</li>
+        </ul>
+
+        <!-- Prestasi -->
+        <h2><i class="fas fa-trophy"></i> Prestasi & Penghargaan</h2>
+        <ul>
+            <li><i class="fas fa-crown"></i> Duta Inspirasi Indonesia Batch 16 (2025)</li>
+            <li><i class="fas fa-map"></i> Duta Pariwisata Kabupaten Sumedang (2024)</li>
+            <li><i class="fas fa-leaf"></i> Duta Lingkungan ESDM Jawa Barat (2024)</li>
+            <li><i class="fas fa-handshake"></i> Duta Lingkungan Persahabatan Jawa Barat (2024)</li>
+            <li><i class="fas fa-tshirt"></i> Putra Batik Berbakat Jawa Barat (2024)</li>
+            <li><i class="fas fa-certificate"></i> Runner Up 1 Duta Kampus UNSAP (2024)</li>
+            <li><i class="fas fa-certificate"></i> Runner Up 1 Putra Batik Kabupaten Sumedang (2023)</li>
+        </ul>
+
+        <!-- Keahlian -->
+        <h2><i class="fas fa-lightbulb"></i> Keahlian</h2>
+        <ul>
+            <li><i class="fas fa-comments"></i> Public Speaking</li>
+            <li><i class="fas fa-users-cog"></i> Leadership</li>
+            <li><i class="fas fa-handshake"></i> Teamwork</li>
+        </ul>
+
+        <!-- Bahasa -->
+        <h2><i class="fas fa-language"></i> Bahasa</h2>
+        <ul>
+            <li><i class="fas fa-flag"></i> Bahasa Indonesia (Fasih)</li>
+            <li><i class="fas fa-globe"></i> Bahasa Inggris (Dasar)</li>
+        </ul>
+
+        <!-- Hobi -->
+        <h2><i class="fas fa-heart"></i> Hobi</h2>
+        <ul>
+            <li><i class="fas fa-mountain"></i> Hiking</li>
+            <li><i class="fas fa-swimmer"></i> Berenang</li>
+            <li><i class="fas fa-microphone"></i> Bernyanyi</li>
+        </ul>
+
+        <!-- Lagu Favorit -->
+        <h2><i class="fas fa-music"></i> Lagu Favorit</h2>
+        <audio controls>
+            <source src="lagu.mp3" type="audio/mpeg" />
+            Browser Anda tidak mendukung pemutar audio.
+        </audio>
+
+        <!-- Video -->
+        <h2><i class="fas fa-video"></i> Video Karya</h2>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/ZEK8G5h4xAA" allowfullscreen></iframe>
+
+        <!-- Sosial Media -->
+        <h2><i class="fas fa-users"></i> Ikuti Saya</h2>
+        <div class="social-links">
+            <a href="https://www.instagram.com/rtantoaris09" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/ristanto0905" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <footer>&copy; 2025 Portofolio Pribadi Ristanto. Semua hak dilindungi.</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
